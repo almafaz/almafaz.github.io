@@ -67,11 +67,11 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <!-- =======================================================
-  * Template Name: HeroBiz - v2.1.0
-  * Template URL: https://bootstrapmade.com/herobiz-bootstrap-business-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
+  * Script for loading network html files:
   ======================================================== -->
+
+
+
 </head>
 
 <body>
@@ -104,14 +104,14 @@
                 <a href="#">Hashtag Evolution</a>
               </li>
               <li>
-                <a href="#">Social Network by Language</a>
-                <a href="#">Wordclouds by Language</a>
-                <a href="#">Wordshift by Language</a>
+                <a href="#">English Social Network</a>
+                <a href="#">Ukranian Social Network</a>
+                <a href="russian_network_graph.html">Russian Social Network</a>
               </li>
               <li>
                 <a href="#">Dispersion by Language</a>
-                <a href="#">Column 4 link 2</a>
-                <a href="#">Column 4 link 3</a>
+                <a href="#">Wordclouds by Language</a>
+                <a href="#">Wordshift by Language</a>
               </li>
             </ul>
           </li>
@@ -125,44 +125,55 @@
 
   <!-- ======= Social Network Section ======= -->
 
-  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-        aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-        aria-label="Slide 3"></button>
+  <section id="networks_language" class="about">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-header">
+        <h2>Change in network interactions between languages</h2>
+      </div>
+
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="background-image: url('assets/imgs/graphs/russian_network.png')">
+            <div class="carousel-caption">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-image: url('assets/imgs/graphs/russian_network.png')">
+            <div class="carousel-caption">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item" style="background-image: url('assets/imgs/graphs/russian_network.png')">
+            <div class="carousel-caption">
+              <h4>Third slide label</h4>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+            <div id="includedContent"></div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
     </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active" style="background-image: url('assets/imgs/graphs/example_network1.png')">
-        <div class="carousel-caption">
-          <h5>First slide label</h5>
-          <p>Some representative placeholder content for the first slide.</p>
-        </div>
-      </div>
-      <div class="carousel-item" style="background-image: url('assets/imgs/graphs/example_network2.png')">
-        <div class="carousel-caption">
-          <h5>Second slide label</h5>
-          <p>Some representative placeholder content for the second slide.</p>
-        </div>
-      </div>
-      <div class="carousel-item" style="background-image: url('assets/imgs/graphs/example_network2.png')">
-        <div class="carousel-caption">
-          <h4>Third slide label</h4>
-          <p>Some representative placeholder content for the third slide.</p>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+  </section>
 
   <!-- ======= End Social Network Section ======= -->
 

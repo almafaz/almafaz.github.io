@@ -83,7 +83,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="index.html#about">Motivation</a></li>
           <li><a class="nav-link scrollto" href="time_analysis.html">Analysis by Time</a></li>
           <li><a href="language_analysis.html">Analysis by Language</a></li>
@@ -101,14 +101,14 @@
                 <a href="#">Hashtag Evolution</a>
               </li>
               <li>
-                <a href="#">Social Network by Language</a>
-                <a href="#">Wordclouds by Language</a>
-                <a href="#">Wordshift by Language</a>
+                <a href="#">English Social Network</a>
+                <a href="#">Ukranian Social Network</a>
+                <a href="russian_network_graph.html">Russian Social Network</a>
               </li>
               <li>
                 <a href="#">Dispersion by Language</a>
-                <a href="#">Column 4 link 2</a>
-                <a href="#">Column 4 link 3</a>
+                <a href="#">Wordclouds by Language</a>
+                <a href="#">Wordshift by Language</a>
               </li>
             </ul>
           </li>
@@ -209,7 +209,7 @@
             </div>
           </div>
           <div class="carousel-item">
-              <img class="d-block w-100" src="assets/imgs/graphs/ukranian_wc.png" alt="Second slide">
+            <img class="d-block w-100" src="assets/imgs/graphs/ukranian_wc.png" alt="Second slide">
 
             <div class="container">
               <div class="carousel-caption text-end">
@@ -259,42 +259,45 @@
                 type: 'bar',
                 stack: 'sensitivity',
                 data: {
-                  labels: ['Usage of Positive Words', 'Usage of Negative Words', 'Total Sum', 'criminal', 'dangerous', 'glory', 'Green', 'Purple', 'Orange'],
+                  labels: ['Usage of Positive Words', 'Usage of Negative Words', 'Total Sum', 'criminal',
+                    'dangerous', 'glory', 'Green', 'Purple', 'Orange'
+                  ],
                   datasets: [{
-                    label: 'Total Sum',
-                    data: [0, 0, 0.22, 0, 0, 0, 0, 0],
-                    backgroundColor: 'rgba(0, 0, 0, 0.4)',
-                    borderColor:'rgba(0, 99, 132, 0)',
-                    borderWidth: 1
-                  },
-                  {
-                    label: '+ ↑',
-                    data: [0, 0.3575983436853003, 0, 0, 0, 0.008646638212125845, 0, 0],
-                    backgroundColor: 'rgba(255, 215, 0, 0.8)',
-                    borderColor:'rgba(255, 99, 132, 0)',
-                    borderWidth: 1
-                  },
-                  {
-                    label: '- ↓',
-                    data: [0, -0.23720026350461185, 0, -0.01044513896024802, -0.008854157529216864, 0, 0, 0, 0],
-                    backgroundColor: 'rgba(0, 87, 183, 0.2)',
-                    borderColor:'rgba(255, 10, 132, 0)',
-                    borderWidth: 1
-                  },
-                  {
-                    label: '+ ↓',
-                    data: [0.6933502729154917, 0, 0, 0, 0, 0, 0, 0, 0],
-                    backgroundColor: 'rgba(255, 215, 0, 0.4)',
-                    borderColor:'rgba(255, 10, 132, 0)',
-                    borderWidth: 1
-                  },
-                  {
-                    label: '- ↑',
-                    data: [-0.5893167701863352, 0, 0, 0, 0, 0, 0, 0, 0],
-                    backgroundColor: 'rgba(0, 87, 183, 0.8)',
-                    borderColor:'rgba(255, 10, 132, 0)',
-                    borderWidth: 1
-                  }]
+                      label: 'Total Sum',
+                      data: [0, 0, 0.22, 0, 0, 0, 0, 0],
+                      backgroundColor: 'rgba(0, 0, 0, 0.4)',
+                      borderColor: 'rgba(0, 99, 132, 0)',
+                      borderWidth: 1
+                    },
+                    {
+                      label: '+ ↑',
+                      data: [0, 0.3575983436853003, 0, 0, 0, 0.008646638212125845, 0, 0],
+                      backgroundColor: 'rgba(255, 215, 0, 0.8)',
+                      borderColor: 'rgba(255, 99, 132, 0)',
+                      borderWidth: 1
+                    },
+                    {
+                      label: '- ↓',
+                      data: [0, -0.23720026350461185, 0, -0.01044513896024802, -0.008854157529216864, 0, 0, 0, 0],
+                      backgroundColor: 'rgba(0, 87, 183, 0.2)',
+                      borderColor: 'rgba(255, 10, 132, 0)',
+                      borderWidth: 1
+                    },
+                    {
+                      label: '+ ↓',
+                      data: [0.6933502729154917, 0, 0, 0, 0, 0, 0, 0, 0],
+                      backgroundColor: 'rgba(255, 215, 0, 0.4)',
+                      borderColor: 'rgba(255, 10, 132, 0)',
+                      borderWidth: 1
+                    },
+                    {
+                      label: '- ↑',
+                      data: [-0.5893167701863352, 0, 0, 0, 0, 0, 0, 0, 0],
+                      backgroundColor: 'rgba(0, 87, 183, 0.8)',
+                      borderColor: 'rgba(255, 10, 132, 0)',
+                      borderWidth: 1
+                    }
+                  ]
                 },
                 options: {
                   indexAxis: 'y',
@@ -306,8 +309,9 @@
                     y: {
                       stacked: true
                     }
-                  }}
-                });
+                  }
+                }
+              });
             </script>
           </div>
         </div>

@@ -1298,11 +1298,11 @@ body {
 }
 .carousel-item > img {
   position: center;
-  top: 0;
-  left: 0;
   width: auto;
   height: auto;
   max-height: 90%;
+  left: auto;
+  right: auto;
 }
 
 
@@ -1330,8 +1330,12 @@ body {
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
+
 .carousel-caption {
   color: var(--color-primary);
+  position: relative;
+  left: auto;
+  right: auto;
 }
 
 .carousel-caption p {

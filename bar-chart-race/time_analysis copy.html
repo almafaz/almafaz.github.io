@@ -5,16 +5,17 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Language Analysis</title>
+  <title>CompSoSci Final Assignment</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+
 
   <!-- Chart.js for plotting interactively -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link
@@ -22,23 +23,19 @@
     rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,16 +45,14 @@
     rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Variables CSS Files. Uncomment your preferred color scheme -->
-  <link href="assets/css/variables.css" rel="stylesheet">
+  <link href="../assets/css/variables.css" rel="stylesheet">
   <!-- <link href="assets/css/variables-blue.css" rel="stylesheet"> -->
   <!-- <link href="assets/css/variables-green.css" rel="stylesheet"> -->
   <!-- <link href="assets/css/variables-orange.css" rel="stylesheet"> -->
@@ -66,14 +61,16 @@
   <!-- <link href="assets/css/variables-pink.css" rel="stylesheet"> -->
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
 
   <!-- =======================================================
-  * Script for loading network html files:
-  ======================================================== -->
+    * Template Name: HeroBiz - v2.1.0
+    * Template URL: https://bootstrapmade.com/herobiz-bootstrap-business-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
 
-
-
+  <!--<link rel="stylesheet" type="text/css" href="./inspector.css">-->
 </head>
 
 <body>
@@ -82,6 +79,7 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
   </script>
 
+  <!-- ======= Header ======= -->
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top" data-scrollto-offset="0">
     <div class="container-fluid d-flex align-items-center justify-content-between">
@@ -130,74 +128,30 @@
     </div>
   </header><!-- End Header -->
 
-  <!-- ======= Social Network Section ======= -->
+  <!-- ======= bar chart race ======= -->
 
-  <section id="social_networks" class="about">
+  <section id="bar_chart" class="about">
     <div class="container" data-aos="fade-up">
 
       <div class="section-header">
         <h2>Change in usage of Words Based on Language</h2>
         <p> write conclusion - what can we see when comparing all the wordclouds? is there anything interesting?</p>
       </div>
+      <script type="module">
 
-      <div id="myCarousel2" class="carousel slide" data-bs-ride="#myCarousel2">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#myCarousel2" data-bs-slide-to="0" class="active" aria-current="true"
-            aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#myCarousel2" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#myCarousel2" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-flex" src="assets/imgs/graphs/russian_network.png" alt="English Word Cloud">
-
-            <div class="container">
-              <div class="carousel-caption text-end">
-                <h1>English</h1>
-                <p>CLICK HERE to see an interactive version of the graph (it is going to be a slow loading time, but so
-                  worth it!) <a href="russian_network_graph.html" class="stretched-link" target="_blank"></a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="d-flex" src="assets/imgs/graphs/russian_network.png" alt="Ukranian Network">
-
-            <div class="container">
-              <div class="carousel-caption text-end">
-                <h1>Ukranian</h1>
-                <p>CLICK HERE to see an interactive version of the graph (it is going to be a slow loading time, but so
-                  worth it!) <a href="russian_network_graph.html" class="stretched-link" target="_blank"></a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="d-flex" src="assets/imgs/graphs/russian_network.png" alt="Russian Network">
-
-            <div class="container">
-              <div class="carousel-caption text-end">
-                <h1>Russian</h1>
-                <p>CLICK HERE to see an interactive version of the graph (it is going to be a slow loading time, but so
-                  worth it!) <a href="russian_network_graph.html" class="stretched-link" target="_blank"></a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel2" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel2" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+        import define from "./index.js";
+        import {Runtime, Library, Inspector} from "./runtime.js";
+        
+        const runtime = new Runtime();
+        const main = runtime.module(define, Inspector.into(document.body));
+        
+      </script>
     </div>
   </section>
-  <!-- ======= End Social Network Section ======= -->
 
   <!-- ======= Social Network Section ======= -->
 
-  <section id="wordclouds" class="about">
+  <section id="social_networks" class="about">
     <div class="container" data-aos="fade-up">
 
       <div class="section-header">
@@ -214,32 +168,35 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-flex" src="assets/imgs/graphs/english_wc.png" alt="English Word Cloud">
+            <img class="d-flex" src="assets/imgs/graphs/russian_network.png" alt="English Word Cloud">
 
             <div class="container">
               <div class="carousel-caption text-end">
-                <h1>English</h1>
-                <p>What is interesting in this cloud?</p>
+                <h1>XX - XX.</h1>
+                <p>CLICK HERE to see an interactive version of the graph (it is going to be a slow loading time, but so
+                  worth it!) <a href="russian_network_graph.html" class="stretched-link" target="_blank"></a></p>
               </div>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="d-flex" src="assets/imgs/graphs/ukranian_wc.png" alt="Ukranian Word Cloud">
+            <img class="d-flex" src="assets/imgs/graphs/russian_network.png" alt="Ukranian Network">
 
             <div class="container">
               <div class="carousel-caption text-end">
-                <h1>Ukranian</h1>
-                <p>What is interesting in this cloud?</p>
+                <h1>XX - XX</h1>
+                <p>CLICK HERE to see an interactive version of the graph (it is going to be a slow loading time, but so
+                  worth it!) <a href="russian_network_graph.html" class="stretched-link" target="_blank"></a></p>
               </div>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="d-flex" src="assets/imgs/graphs/russian_wc.png" alt="Russian Word Cloud">
+            <img class="d-flex" src="assets/imgs/graphs/russian_network.png" alt="Russian Network">
 
             <div class="container">
               <div class="carousel-caption text-end">
-                <h1>Russian</h1>
-                <p>What is interesting in this cloud?</p>
+                <h1>XX - XX</h1>
+                <p>CLICK HERE to see an interactive version of the graph (it is going to be a slow loading time, but so
+                  worth it!) <a href="russian_network_graph.html" class="stretched-link" target="_blank"></a></p>
               </div>
             </div>
           </div>
@@ -257,18 +214,81 @@
   </section>
   <!-- ======= End Social Network Section ======= -->
 
+  <!-- ======= Social Network Section ======= -->
+
+  <section id="wordclouds" class="about">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h2>Change in usage of Words Across Different Time Periods</h2>
+        <p> write conclusion - what can we see when comparing all the wordclouds? is there anything interesting? @Simone
+          can you write how we found the wordclouds (frequency vs important words etc.)</p>
+      </div>
+
+      <div id="myCarousel2" class="carousel slide" data-bs-ride="#myCarousel2">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#myCarousel2" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#myCarousel2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#myCarousel2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-flex" src="assets/imgs/graphs/21_02_to_10_03_wc.png" alt="Wordcloud for the first period">
+
+            <div class="container">
+              <div class="carousel-caption text-end">
+                <h1>21st. Feb - 10th. Mar</h1>
+                <p>What is interesting in this cloud?</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-flex" src="assets/imgs/graphs/11_03_to_29_03_wc.png" alt="Wordcloud for the second period">
+
+            <div class="container">
+              <div class="carousel-caption text-end">
+                <h1>11th. Mar - 29th. Mar</h1>
+                <p>What is interesting in this cloud?</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-flex" src="assets/imgs/graphs/30_03_to_15_04_wc.png" alt="Wordcloud for the third period">
+
+            <div class="container">
+              <div class="carousel-caption text-end">
+                <h1>30th. Mar - 15th. Apr</h1>
+                <p>What is interesting in this cloud?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel2" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel2" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======= End Social Network Section ======= -->
+
 
   <!-- ======= Word Shift Graph ======= -->
   <section id="wordshift" class="about">
     <div class="container" data-aos="fade-up">
 
       <div class="section-header">
-        <h2>Change in usage of Words from russian to ukranina</h2>
+        <h2>Change in usage of Words from the beginning of the war to now</h2>
       </div>
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2>subheader?</h2>
           <p>writing something about the wordshift here</p>
         </div>
         <div class="col-md-5">
@@ -338,30 +358,25 @@
         </div>
       </div>
     </div>
-
   </section>
   <!-- ======= End Word Shift Graph ======= -->
 
   <!-- ======= Lexical Dispersion ======= -->
   <section id="lexical" class="about">
     <div class="container" data-aos="fade-up">
+
       <div class="section-header">
-        <h2>Lexical dispersion</h2>
-        <p>something here</p>
+        <h2>Change in usage of Words from the beginning of the war to now</h2>
+        <p> write something about when the time periods are and stuff like that - write conclusion - what can we see
+          when comparing all the wordclouds? is there anything interesting?</p>
       </div>
 
       <div class="img">
         <div class="graph"><img src="assets/imgs/graphs/dispersion.png" class="img-fluid" alt="">
         </div>
       </div>
-
-      <div class="section-header">
-        <p>something here</p>
-      </div>
-    </div>
   </section>
   <!-- ======= End Lxical dispersion ======= -->
-
 
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
@@ -370,15 +385,15 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="../assets/js/main.js"></script>
 
 </body>
 

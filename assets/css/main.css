@@ -1305,6 +1305,10 @@ body {
   right: auto;
 }
 
+.img {
+  max-width: 99%;
+  max-height: 99%;
+}
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
@@ -3034,4 +3038,124 @@ body {
 .footer .footer-legal .social-links a:hover {
   background: var(--color-primary);
   text-decoration: none;
+}
+
+
+:root {
+  --syntax_normal: #1b1e23;
+  --syntax_comment: #a9b0bc;
+  --syntax_number: #20a5ba;
+  --syntax_keyword: #c30771;
+  --syntax_atom: #10a778;
+  --syntax_string: #008ec4;
+  --syntax_error: #ffbedc;
+  --syntax_unknown_variable: #838383;
+  --syntax_known_variable: #005f87;
+  --syntax_matchbracket: #20bbfc;
+  --syntax_key: #6636b4;
+  --mono_fonts: 82%/1.5 Menlo, Consolas, monospace;
+}
+.observablehq--collapsed,
+.observablehq--expanded,
+.observablehq--function,
+.observablehq--gray,
+.observablehq--import,
+.observablehq--string:after,
+.observablehq--string:before {
+  color: var(--syntax_normal);
+}
+.observablehq--collapsed,
+.observablehq--inspect a {
+  cursor: pointer;
+}
+.observablehq--field {
+  text-indent: -1em;
+  margin-left: 1em;
+}
+.observablehq--empty {
+  color: var(--syntax_comment);
+}
+.observablehq--blue,
+.observablehq--keyword {
+  color: #3182bd;
+}
+.observablehq--forbidden,
+.observablehq--pink {
+  color: #e377c2;
+}
+.observablehq--orange {
+  color: #e6550d;
+}
+.observablehq--boolean,
+.observablehq--null,
+.observablehq--undefined {
+  color: var(--syntax_atom);
+}
+.observablehq--bigint,
+.observablehq--date,
+.observablehq--green,
+.observablehq--number,
+.observablehq--regexp,
+.observablehq--symbol {
+  color: var(--syntax_number);
+}
+.observablehq--index,
+.observablehq--key {
+  color: var(--syntax_key);
+}
+.observablehq--prototype-key {
+  color: #aaa;
+}
+.observablehq--empty {
+  font-style: oblique;
+}
+.observablehq--purple,
+.observablehq--string {
+  color: var(--syntax_string);
+}
+.observablehq--error,
+.observablehq--red {
+  color: #e7040f;
+}
+.observablehq--inspect {
+  font: var(--mono_fonts);
+  overflow-x: auto;
+  display: block;
+  white-space: pre;
+}
+.observablehq--error .observablehq--inspect {
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+
+
+
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css";
+
+#parentContainer {
+  height: 10000px;
+}
+
+
+#container {
+  height: 900px;
+}
+
+#play-controls {
+  position: absolute;
+  left: 100px;
+  top: 30px;
+}
+
+#play-pause-button {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border: 1px solid silver;
+  border-radius: 3px;
+  background: #f8f8f8;
+}
+
+#play-range {
+  transform: translateY(2.5px);
 }

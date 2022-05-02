@@ -127,6 +127,40 @@
   </header><!-- End Header -->
 
 
+
+
+
+  <!-- ======= bar chart race ======= -->
+
+  <section id="bar_chart" class="about">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-header">
+        <h2>Change in usage of Words Based on Language</h2>
+        <p> write conclusion - what can we see when comparing all the wordclouds? is there anything interesting?</p>
+      </div>
+
+      <div id="observablehq-chart-e25ad43c"></div>
+
+      <script type="module">
+        import {Runtime, Library, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+        // import define from "https://api.observablehq.com/@d3/bar-chart-race.js?v=3";
+        import define from "./bar-chart.js";
+    
+        new Runtime().module(define, name => {
+    
+      if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-e25ad43c"));
+    });
+    </script>
+
+    </div>
+  </section>
+
+
+
+
+
+
   <!-- ======= Social Network Section ======= -->
 
   <section id="social_networks" class="about">
@@ -198,7 +232,8 @@
     <div class="container" data-aos="fade-up">
       <div class="section-header">
         <h2>Change in usage of Words Across Different Time Periods</h2>
-        <p> write conclusion - what can we see when comparing all the wordclouds? is there anything interesting? @Simone can you write how we found the wordclouds (frequency vs important words etc.)</p>
+        <p> write conclusion - what can we see when comparing all the wordclouds? is there anything interesting? @Simone
+          can you write how we found the wordclouds (frequency vs important words etc.)</p>
       </div>
 
       <div id="myCarousel2" class="carousel slide" data-bs-ride="#myCarousel2">

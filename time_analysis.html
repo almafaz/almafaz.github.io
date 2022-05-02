@@ -134,10 +134,8 @@
 
   <section id="bar_chart" class="about">
     <div class="container" data-aos="fade-up">
-
       <div class="section-header">
-        <h2>Change in usage of Words Based on Language</h2>
-        <p> write conclusion - what can we see when comparing all the wordclouds? is there anything interesting?</p>
+        <h2>the most frequently used hashtags changes from day to day</h2>
       </div>
 
       <div id="observablehq-chart-e25ad43c"></div>
@@ -153,85 +151,22 @@
     });
     </script>
 
-    </div>
-  </section>
-
-
-
-
-
-
-  <!-- ======= Social Network Section ======= -->
-
-  <section id="social_networks" class="about">
-    <div class="container" data-aos="fade-up">
-
       <div class="section-header">
-        <h2>Change in usage of Words Based on Language</h2>
         <p> write conclusion - what can we see when comparing all the wordclouds? is there anything interesting?</p>
       </div>
 
-      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-            aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-flex" src="assets/imgs/graphs/russian_network.png" alt="English Word Cloud">
-
-            <div class="container">
-              <div class="carousel-caption text-end">
-                <h1>XX - XX.</h1>
-                <p>CLICK HERE to see an interactive version of the graph (it is going to be a slow loading time, but so
-                  worth it!) <a href="russian_network_graph.html" class="stretched-link" target="_blank"></a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="d-flex" src="assets/imgs/graphs/russian_network.png" alt="Ukranian Network">
-
-            <div class="container">
-              <div class="carousel-caption text-end">
-                <h1>XX - XX</h1>
-                <p>CLICK HERE to see an interactive version of the graph (it is going to be a slow loading time, but so
-                  worth it!) <a href="russian_network_graph.html" class="stretched-link" target="_blank"></a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="d-flex" src="assets/imgs/graphs/russian_network.png" alt="Russian Network">
-
-            <div class="container">
-              <div class="carousel-caption text-end">
-                <h1>XX - XX</h1>
-                <p>CLICK HERE to see an interactive version of the graph (it is going to be a slow loading time, but so
-                  worth it!) <a href="russian_network_graph.html" class="stretched-link" target="_blank"></a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
     </div>
   </section>
-  <!-- ======= End Social Network Section ======= -->
+
+
+
 
   <!-- ======= Social Network Section ======= -->
 
   <section id="wordclouds" class="about">
     <div class="container" data-aos="fade-up">
       <div class="section-header">
-        <h2>Change in usage of Words Across Different Time Periods</h2>
+        <h2>the frequency of words used depends on the time period</h2>
         <p> write conclusion - what can we see when comparing all the wordclouds? is there anything interesting? @Simone
           can you write how we found the wordclouds (frequency vs important words etc.)</p>
       </div>
@@ -296,12 +231,13 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-header">
-        <h2>Change in usage of Words from the beginning of the war to now</h2>
+        <h2>there is a shift in usage of words in tweets for the first two weeks of the war vs the previous two weeks</h2>
       </div>
 
       <div class="row featurette">
         <div class="col-md-7">
-          <p>writing something about the wordshift here</p>
+          <p>writing something about the wordshift here. also can we trust the wordshift to be accurate because of the
+            missing context?</p>
         </div>
         <div class="col-md-5">
           <div>
@@ -312,40 +248,45 @@
                 type: 'bar',
                 stack: 'sensitivity',
                 data: {
-                  labels: ['Usage of Positive Words', 'Usage of Negative Words', 'Total Sum', 'criminal',
-                    'dangerous', 'glory', 'Green', 'Purple', 'Orange'
+                  labels: ['Usage of Positive Words', 'Usage of Negative Words', 'Total Sum', 'crimes',
+                    'rape', 'attack', 'sky', 'money', 'raped', 'food', 'plant'
                   ],
                   datasets: [{
                       label: 'Total Sum',
-                      data: [0, 0, 0.22, 0, 0, 0, 0, 0],
+                      data: [0, 0, 0.009999999999999787, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                        0],
                       backgroundColor: 'rgba(0, 0, 0, 0.4)',
                       borderColor: 'rgba(0, 99, 132, 0)',
                       borderWidth: 1
                     },
                     {
                       label: '+ ↑',
-                      data: [0, 0.3575983436853003, 0, 0, 0, 0.008646638212125845, 0, 0],
+                      data: [0.09135912993115054, 0, 0, 0, 0, 0, 0.5868072045897164, 0.5392013864024857, 0, 0, 0.4365006715933006, 0, 0, 0, 0, 0, 0, 0, 0,
+                        0],
                       backgroundColor: 'rgba(255, 215, 0, 0.8)',
                       borderColor: 'rgba(255, 99, 132, 0)',
                       borderWidth: 1
                     },
                     {
                       label: '- ↓',
-                      data: [0, -0.23720026350461185, 0, -0.01044513896024802, -0.008854157529216864, 0, 0, 0, 0],
+                      data: [0, 0.04382255790697433, 0, 1.059830698142894, 0.6004915661366605, 0, 0, 0, 0.44872283084166287, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                        0],
                       backgroundColor: 'rgba(0, 87, 183, 0.2)',
                       borderColor: 'rgba(255, 10, 132, 0)',
                       borderWidth: 1
                     },
                     {
                       label: '+ ↓',
-                      data: [0.6933502729154917, 0, 0, 0, 0, 0, 0, 0, 0],
+                      data: [-0.08007327276511103, 0, 0, 0, 0, 0, 0, 0, 0, -0.44595290693958217, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                        0],
                       backgroundColor: 'rgba(255, 215, 0, 0.4)',
                       borderColor: 'rgba(255, 10, 132, 0)',
                       borderWidth: 1
                     },
                     {
                       label: '- ↑',
-                      data: [-0.5893167701863352, 0, 0, 0, 0, 0, 0, 0, 0],
+                      data: [0, -0.04554089818814352, 0, 0,0, -0.5902694057636592, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                        0],
                       backgroundColor: 'rgba(0, 87, 183, 0.8)',
                       borderColor: 'rgba(255, 10, 132, 0)',
                       borderWidth: 1
@@ -370,6 +311,7 @@
         </div>
       </div>
     </div>
+
   </section>
   <!-- ======= End Word Shift Graph ======= -->
 

@@ -136,7 +136,7 @@ function bars(svg) {
 function _labels(n,x,prev,y,next,textTween){return(
 function labels(svg) {
   let label = svg.append("g")
-      .style("font", "bold 12px var(--sans-serif)")
+      .style("font", "bold 18px var(--sans-serif)")
       .style("font-variant-numeric", "tabular-nums")
       .attr("text-anchor", "end")
     .selectAll("text");

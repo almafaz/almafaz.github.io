@@ -47,7 +47,7 @@ async function* _chart(replay,d3,width,height,bars,axis,labels,ticker,keyframes,
 
 
 function _duration(){return(
-500
+200
 )}
 
 function _n(){return(

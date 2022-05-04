@@ -89,7 +89,6 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto" href="index.html#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="index.html#about">Motivation</a></li>
           <li><a class="nav-link scrollto" href="time_analysis.html">Analysis by Time</a></li>
           <li><a href="language_analysis.html">Analysis by Language</a></li>
           <li class="dropdown megamenu"><a href="#"><span>Data Visualisation Quick Links</span> <i
@@ -115,6 +114,7 @@
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="code.html" target="blank_">Explainer Notebook</a></li>
+          <li><a href="test_data.csv" download="test_data.csv">Download Test Data</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle d-none"></i>
       </nav><!-- .navbar -->
@@ -127,8 +127,9 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-header">
-        <h2>comparing the network interactions between tweets in different languages showed *...* </h2>
-        <p> write conclusion - what can we see when comparing all the wordclouds? is there anything interesting?</p>
+        <h2>How do Twitter users interact in Ukrainian and Russian? </h2>
+        <p>In the following network analysis we investigate the nature of how users interact in Ukrainian and Russian by
+          looking at both clustering trends and community detection.</p>
       </div>
 
       <div id="myCarousel2" class="carousel slide" data-bs-ride="#myCarousel2">
@@ -184,6 +185,39 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
+      </div>
+      <div class="section-header">
+        <p>Above are the network graphs for both languages displayed - both with and without community detection,
+          alongside their random network counterpart.</p>
+
+        <p> <br>Our analysis show that in both cases, the clustering trend for the random network is actually more
+          present than that of the original graphs, which could indicate that users to not seem to stay aorund in the
+          same threads responding to each other. Especially when retweeting is such a big part of twitter - if many
+          people retweet the same tweet, a big cluster will not form around them since they do not reply to eachother.
+          We can relate this to how the orignal networks compare to their random counterpart visually - in both
+          networks, the number of edges are the roughly the same in the original and random networks, but the number of
+          nodes is higher in the random graph. This could explain why the original networks look more sparse than their
+          random counterpart.</p>
+
+        <p> <br>Furthermore, coloring the nodes based on the community partitions allows us to detect some cluster
+          structures. As perhaps expected, most of the big clusters come from users retweeting and replying to bigger
+          news stations or organizations in both networks. We do not typically see private people engage in discussion
+          of the same size as for the news stations.</p>
+
+        <p> <br>This clustering trend makes sense if we consider how useres generally interact on Twitter. The structure
+          we typically will see in Twitter networks is for instance a certain tweet will go viral, which many will
+          retweet, reply to and quote tweet - then these replies and quote tweeets will be retweeted and replied to and
+          so on and it will continue almost in an exponential manner, meaning that people will not form one big
+          discussion forum in the comments of the original tweet, but rather spread the message in a very fast and
+          "broad" way.<p>
+
+            <p> <br>Furthermore, the connections we observe in these networks are not the same connections we see in a
+              social network for instance - the links do not correspond to friendships but rather a reaction a user
+              might have on something another user stated. Parent authors will not be enclined to respond in the same
+              way as on Reddit for instance. This means we will not typically observe triadic closures in these Twitter
+              networks compared to a social network of friends, family and co-workers. Seeing as we also investigate a
+              very difficult and widespread topic, there is not the same sense of community presented compared to how
+              communities behave on Reddit.</p>
       </div>
     </div>
   </section>

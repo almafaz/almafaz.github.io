@@ -901,6 +901,9 @@ section {
   background: var(--color-primary);
 }
 
+.carousel .carousel-indicators li {background-color: red;}
+.carousel .carousel-indicators li.active {background-color: blue;}
+
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;

@@ -265,10 +265,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>Why are Tweets about the War in Russia and Ukraine relevant?</h2>
-          <p> The war in Ukraine has affected the political climate, the economy and people's sense of
-            security all over the world. This makes it relevant to explore the public opinion towards the Russia-Ukraine
-            situation</p>
+          <h2>The quick and dirty on the dataset</h2>
+          <p> More than a million tweets, lots of different languages and 54 days of war</p>
         </div>
 
         <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
@@ -285,6 +283,7 @@
             <ul class="nav nav-pills mb-3">
               <li><a class="nav-link active" data-bs-toggle="pill" href="#tab3">Downloading the tweets</a></li>
               <li><a class="nav-link" data-bs-toggle="pill" href="#tab4">Data attributes</a></li>
+              <li><a class="nav-link" data-bs-toggle="pill" href="#tab5">Cleaning the data</a></li>
             </ul><!-- End Tabs -->
 
             <!-- Tab Content -->
@@ -292,43 +291,63 @@
 
               <div class="tab-pane fade show active" id="tab3">
 
-                <p class="fst-italic">The tweets are downloaded based on a data set consisting of tweet IDs. The dataset is available at the github repo: ehsanulhaq1/russo_ukraine_dataset, where the authors are also listed. The tweet ids from the data set was retrieved from Twitter using the Twitter streaming Api and include tweets from each day in the period 21-02-2022 to 15-04-2022. </p> <p> The tweet ids have been collected based on a range of relevant keywords (russia, ukraine, putin, zelensky, kyiv, etc.). This list was continuously updated by the authors during the period of the data collection, as more keywords became relevant for the crisis. </p>
+                <p>The tweets are downloaded based on a data set consisting of tweet IDs. The dataset is available at the github repo <a href="https://github.com/ehsanulhaq1/russo_ukraine_dataset" target="blank_">here</a>, where the authors are also listed. The tweet ids from the data set was retrieved from Twitter using the Twitter streaming Api and include tweets from each day in the period 21-02-2022 to 15-04-2022. </p> <p> The tweet ids have been collected based on a range of relevant keywords (russia, ukraine, putin, zelensky, kyiv, etc.). This list was continuously updated by the authors during the period of the data collection, as more keywords became relevant for the crisis. </p>
                 <p> Below is a complete list of the keywords as well as their introduction date. All keywords were translated to russian as well as ukranian</p>
                 <div class="d-flex align-items-center mt-4">
-                  <h4>27th Feb:  russia, ukraine, putin, zelensky, russian, ukranian, keiv, kyiv <br> 1st Mar: kharkiv <br> 3rd Mar: khorsan <br> 4th Mar: zaporizhzhia, energodar</h4>
+                  <h4>27th Feb:  russia, ukraine, putin, zelensky, russian, ukranian, keiv, kyiv <br> 1st Mar: kharkiv <br> 3rd Mar: khorsan <br> 4th Mar: zaporizhzhia, energodar <br></h4>
                 </div>
-                <p>To make sure we had a uniform distribution of data during the whole period, we extracted 18.000 randomly chosen tweet ids from the github repo for each day</p>
+                <p> <br>To make sure we had a uniform distribution of data during the whole period, we extracted 18.000 randomly chosen tweet ids from the github repo for each day</p>
                 <p>Due to the reduction in data from our side as well as the chosen keywords from the author of the dataset, the following analysis is not a complete reflection of sentiment surrounding the Ukraine/Russia war on Twitter. However, it is still a fair indication of it.</p>
-
-
               </div><!-- End Tab 1 Content -->
 
               <div class="tab-pane fade show" id="tab4">
 
-                <p class="fst-italic">The Russian invasion of Ukraine has shook
-                  many countries and has severely affected economies, families and political relationships across the
-                  world.
-                  As an effect of Russia's endless war crimes, threat to Ukraine's independence and strained
-                  relationship to NATO,
-                  many countries have imposed sanctions on Russia resulting in price increases and a massive decrease in
-                  delivery of gas
-                  from Russia to the world. More importantly, more than 14.000 Ukranians have lost their lives
-                  and many more has become refugees in Europe.</p>
+                <p>After retrieving the tweet ids, we use the Twitter Api v2 to collect the corresponding tweets from Twitter and saved them all in a .csv-file.
+
+                  Our dataset consists of 18.000 tweets distributed over 54 days, and the dataset include tweets from 651.363 users in total. As the majority of the users do not allow tracking of geolocation, we were not able to save the countries/locations of the users and tweets as first intended. Instead we tracked the language used in each tweet and in total we found 32 languages.
+                  
+                </p><p>We saved the following 8 attributes for each tweet:</p>
 
                 <div class="d-flex align-items-center mt-4">
-                  <i class="bi bi-check2"></i>
-                  <h4>Political relationships are changing</h4>
+                  <h4> - text of tweet (“full_text”) <br> - hashtags (“entities.hashtags”) <br> - id of tweet (“id”) <br> - the name of the user of the tweet (“user.screen_name”) <br> - the user that the tweet is replying to (“in_reply_to_screen_name”) <br> - date of tweet upload (“created_at”) <br> - the language the tweet is written in (“lang”) <br> - the location of the tweet (if any) (“location”)</h4>
                 </div>
 
-                <div class="d-flex align-items-center mt-4">
-                  <i class="bi bi-check2"></i>
-                  <h4>Sanctions against Russia affect economies worldwide</h4>
-                </div>
+                <p> <br>The full text and hashtags were saved to be used in our text and discourse analysis later on. We used the creation date and written language of the tweet to filter the tweets on time and language, respectively, when performing the text and network analysis, and the tweet id and parent author were used to generate several social network graphs during the analysis.</p>
 
-                <div class="d-flex align-items-center mt-4">
-                  <i class="bi bi-check2"></i>
-                  <h4>Ukranians are in need of help from the rest of the world</h4>
-                </div>
+              </div><!-- End Tab 2 Content -->
+
+              <div class="tab-pane fade show" id="tab5">
+
+                <p>After extracting all tweets, we performed multiple steps of data cleaning before using the data for analysis. The following major steps were performed on all tweets in our data cleaning-process:
+                  
+                  <div class="d-flex align-items-center mt-4">
+                    <i class="bi bi-check2"></i>
+                    <h4>Translation to english</h4>
+                  </div>
+                  <div class="d-flex align-items-center mt-4">
+                    <i class="bi bi-check2"></i>
+                    <h4>Lowercasing</h4>
+                  </div>
+                  <div class="d-flex align-items-center mt-4">
+                    <i class="bi bi-check2"></i>
+                    <h4>Stemming (using Porter Stemmer)</h4>
+                  </div>
+                  <div class="d-flex align-items-center mt-4">
+                    <i class="bi bi-check2"></i>
+                    <h4>Stopwords Removal</h4>
+                  </div>
+                  <div class="d-flex align-items-center mt-4">
+                    <i class="bi bi-check2"></i>
+                    <h4>Filtering out emojis and other non-alphanumeric content</h4>
+                  </div>
+                  <div class="d-flex align-items-center mt-4">
+                    <i class="bi bi-check2"></i>
+                    <h4>Hashtags detection</h4>
+                  </div>
+                  <div class="d-flex align-items-center mt-4">
+                    <i class="bi bi-check2"></i>
+                    <h4>Tokenization of tweet texts</h4>
+                  </div>
 
               </div><!-- End Tab 2 Content -->
 

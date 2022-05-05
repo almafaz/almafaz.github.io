@@ -351,8 +351,39 @@
 
       <div class="row featurette">
         <div class="col-md-7">
-          <p>writing something about the wordshift here. also can we trust the wordshift to be accurate because of the
-            missing context?</p>
+          <p>The word shift plot to the right displays the shift in use of words from the first two weeks of the war vs.
+            the first two weeks of April. Hold your mouse on top of the bars to the right to see the exact values of
+            word
+            shifts! </p>
+          <p>To clarify what can be seen in the plot, the light colors represent the words that have been less
+            frequently used in ukranian tweets than in russian tweets and the dark colors respresent words that are more
+            frequently used in ukranian than in russian.
+            Yellow indicates positive words, while blue indicates negative words.
+          </p>
+          <p> <br>
+            As can be seen by the light yellow color, the word 'russia' is not as commonly used by tweets written in
+            ukranian, than they are in russian tweets. It can also be seen that it is counted as a positive word. Since
+            the intention of the tweet is not necessarily for 'russia' to be positive, this might skew the overall
+            result of the wordshift so that the overall ukranian tweets are counted more negatively than they perhaps
+            should have been.
+
+            To fix this issue, we would either have to have some contextual information and assign 'russia' and
+            'russian' our own sentiment score depending on the context or we would have to remove the word completely.
+            Both of these seemed to be subpar solutions, since the decrease in the use of 'russia' and 'russian' is
+            still a valuable insight and creating a context specific sentiment score for only the words 'russian' and
+            'russia' would make the wordshift unnecessarily complicated.
+          </p><p>
+            It can be seen that ukrainian tweets more often include the word 'glory'. Ukrain has a war slogan 'Slava
+            Ukraini' which translates to 'Glory to Ukraine' in english. 'win','victory' and 'enemy' is also more
+            frequently used by ukrainian tweets.
+          </p><p>
+            Russian tweets more often use the negative words 'bomb', 'operation', 'killed', 'attacked' than ukrainian
+            tweets do. They also more often use the positive words like 'russia', 'russian', 'like', 'special', where,
+            as previously stated, the words 'russia' and 'russian' is slightly more ambiguous in terms of what the sentiment
+            score should be.
+          </p><p>
+            Overall ukrainian tweets have a higher sentiment score than russian tweets, although the shift in sentiment
+            score is not large.</p>
         </div>
         <div class="col-md-5">
           <div>

@@ -84,7 +84,6 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto" href="index.html#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="index.html#about">Motivation</a></li>
           <li><a class="nav-link scrollto" href="time_analysis.html">Analysis by Time</a></li>
           <li><a href="language_analysis.html">Analysis by Language</a></li>
           <li class="dropdown megamenu"><a href="#"><span>Data Visualisation Quick Links</span> <i
@@ -96,12 +95,11 @@
               <li>
                 <a href="time_analysis.html#bar_chart">Hashtags Evolution</a>
                 <a href="time_analysis.html#lexical">Dispersion of Words over Time</a>
-                <a href="language_analysis.html#social_networks">Social Network by Language</a>
               </li>
               <li>
-                <a href="russian_network_graph.html" target="blank_">English Social Network</a>
-                <a href="russian_network_graph.html" target="blank_">Ukranian Social Network</a>
-                <a href="russian_network_graph.html" target="blank_">Russian Social Network</a>
+                <a href="language_analysis.html#social_networks">Social Network by Language</a>
+                <a href="ukranian_network_graph.html" target="blank_">Interactive Ukranian Network</a>
+                <a href="russian_network_graph.html" target="blank_">Interactive Russian Network</a>
               </li>
               <li>
                 <a href="time_analysis.html#wordclouds">Wordclouds by Time</a>
@@ -110,7 +108,8 @@
               </li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="code.html" target="blank_">Code</a></li>
+          <li><a class="nav-link scrollto" href="code.html" target="blank_">Explainer Notebook</a></li>
+          <li><a href="test_data.csv" download="test_data.csv">Download Test Data</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle d-none"></i>
       </nav><!-- .navbar -->
@@ -119,28 +118,28 @@
 
 
 
-
-
   <!-- ======= bar chart race ======= -->
-
   <section id="bar_chart" class="about">
     <div class="container" data-aos="fade-up">
+
       <div class="section-header">
-        <h2>watch the most popular hashtags change from day to day here</h2>
+        <h2>Watch the most popular hashtags change from day to day here</h2>
       </div>
 
-      <div id="observablehq-chart-e25ad43c"></div>
+      <div class="img-fluid" id="observablehq-chart-e25ad43c"></div>
 
-      <script type="module">
-        import {Runtime, Library, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-        // import define from "https://api.observablehq.com/@d3/bar-chart-race.js?v=3";
-        import define from "./bar-chart.js";
-    
-        new Runtime().module(define, name => {
-    
-      if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-e25ad43c"));
-    });
-    </script>
+        <script type="module">
+          import {Runtime, Library, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+            // import define from "https://api.observablehq.com/@d3/bar-chart-race.js?v=3";
+            import define from "./bar-chart.js";
+        
+            new Runtime().module(define, name => {
+        
+          if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-e25ad43c"));
+        });
+        </script>
+        </div>
+      </div>
 
       <div class="section-header">
         <p> If you hang around here for long enough, you will see the hashtags change over time. As time goes by,
@@ -148,20 +147,41 @@
           Ukranian city names appear and this actually gives us a rather precise timeline of the Russian invasions in
           the
           different areas of Ukraine. </p>
+        <p> <br> Looking at the bar chart from day to day, we see a general persistent trend in hashtags such as Ukraine
+          and Russia. Furthermore many hashtags expressing sympathy with Ukraine is trending throughout the period.
+          Examples of these are "StandWithUkraine" and "StopRussia".
+
+        </p>
+        <p> <br>One of the interesting things we find when studying the development in hashtag-trends is that different
+          Ukranian city names are trending around the same day as their were attacked by Russia. This means that the bar
+          chart provides us with a rather precise timeline of the attacks of Ukrainian cities. On the 24/02/2022 we see
+          that "Kyiv" is trending which corresponds to the day that Russia initiated attacks on the Kyiv Oblast <a
+            href="https://edition.cnn.com/europe/live-news/ukraine-russia-news-02-24-22-intl/index.html">(www.edition.cnn.com)</a>.
+          The same applies on 02/03/2022 where Kharkiv was trending and the Russian army captured Kharkiv <a
+            href="https://www.nytimes.com/live/2022/03/02/world/ukraine-russia-war">(www.nytimes.com)</a>, Mariupol on
+          10/03/2022, where the city was bombed <a
+            href="https://www.theguardian.com/world/2022/mar/10/mariupol-bombing-ukraine-before-and-after-satellite-images-map-russian-attack-residential-maternity-childrens-hospital">(www.theguardian.com)</a>
+          and lastly "Bucha" and "Buchamassacre" on 04/04/2022 and the following days. Bucha was visited on 04/04 by
+          Ukranian president Zelensky after the killings, rapings and torturement of many Ukranian civilians.
+
+        </p>
+        <p> <br>All in all it seems that the majority, if not all, of the top trending hashtags on Twitter regarding the
+          war
+          expresses sympathy with Ukraine in this time of war. It is therefore probable that the majority of Twitter
+          users sympathises with Ukraine. Still it cannot be excluded that some nations may use other social media
+          platforms than Twitter and therefore we cannot conclude that the majority of social media users in general
+          supports Ukraine. </p>
       </div>
 
-    </div>
   </section>
 
 
-
-
-  <!-- ======= Social Network Section ======= -->
+  <!-- ======= Wordclouds Section ======= -->
 
   <section id="wordclouds" class="about">
     <div class="container" data-aos="fade-up">
       <div class="section-header">
-        <h2>the relevancy of words depends on the period in time</h2>
+        <h2>The most relevant words depends on the period in time</h2>
         <p> Take a look at the wordclouds filtered on time in this section to see the most relevant words regarding the
           war in the given time period
           on Twitter. The wordclouds are generated based on TF-IDF
@@ -269,7 +289,7 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-header">
-        <h2>see the shift in usage of words from the first two weeks of the war until now</h2>
+        <h2>See the shift in usage of words from the first two weeks of the war until now</h2>
       </div>
 
       <div class="row featurette">
@@ -369,15 +389,35 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-header">
-        <h2>change in usage of words from the beginning of the war until now</h2>
-        <p> write something about when the time periods are and stuff like that - write conclusion - what can we see
-          when comparing all the wordclouds? is there anything interesting?</p>
+        <h2>Change in usage of words from the beginning of the war until now</h2>
       </div>
 
       <div class="img">
         <div class="graph"><img src="assets/imgs/graphs/dispersion.png" class="img-fluid" alt="">
         </div>
       </div>
+
+      <div class="section-header">
+        <p> <br> <br>There are a few interesting tendencies to be seen in the dispersion plot above. First of all, the
+          use of the Ukranian city name "Vasylkiv" peaks around the 25th-28th February 2022, then again around 12th
+          March 2022 and lastly in the period of 1st-4th April 2022. These periods corresponds to the dates of the
+          initial and second attack on the city and the declaration of liberation from Russian invaders, respectively <a
+            href="https://www.theguardian.com/world/2022/feb/28/vasylkiv-why-this-small-ukrainian-town-is-now-a-big-russian-target">(www.theguardian.com)</a>.
+
+        </p>
+        <p> <br>Furthermore the word "glory" was used mostly by the Russians around February 28th 2022, which was a few
+          days after the first attacks in the Russian invasion of Ukraine. There is a ukranian war-saying "Slava
+          Ukraina" which mean "Glory to Ukraine", so the russian tweets about glory could possibly indicate a
+          pro-ukranian tweet.
+
+        </p>
+        <p> <br>The word "economy" was used significantly more by the Russians than the other languages on March 8th
+          2022 which is approximately a week after the West started to impose economical sanctions on Russia(ns). It can
+          also be seen that the expression "nuclear war" seemed to be used more by the Russians around April 1st. We did
+          not find any particular big events regarding this on the exact date but the debate of whether a nuclear war
+          was a significant threat did rise during April 2022</p>
+      </div>
+
   </section>
   <!-- ======= End Lxical dispersion ======= -->
 

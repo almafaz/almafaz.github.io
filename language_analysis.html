@@ -89,7 +89,6 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto" href="index.html#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="index.html#about">Motivation</a></li>
           <li><a class="nav-link scrollto" href="time_analysis.html">Analysis by Time</a></li>
           <li><a href="language_analysis.html">Analysis by Language</a></li>
           <li class="dropdown megamenu"><a href="#"><span>Data Visualisation Quick Links</span> <i
@@ -101,12 +100,11 @@
               <li>
                 <a href="time_analysis.html#bar_chart">Hashtags Evolution</a>
                 <a href="time_analysis.html#lexical">Dispersion of Words over Time</a>
-                <a href="language_analysis.html#social_networks">Social Network by Language</a>
               </li>
               <li>
-                <a href="russian_network_graph.html" target="blank_">English Social Network</a>
-                <a href="russian_network_graph.html" target="blank_">Ukranian Social Network</a>
-                <a href="russian_network_graph.html" target="blank_">Russian Social Network</a>
+                <a href="language_analysis.html#social_networks">Social Network by Language</a>
+                <a href="ukranian_network_graph.html" target="blank_">Interactive Ukranian Network</a>
+                <a href="russian_network_graph.html" target="blank_">Interactive Russian Network</a>
               </li>
               <li>
                 <a href="time_analysis.html#wordclouds">Wordclouds by Time</a>
@@ -115,7 +113,8 @@
               </li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="code.html" target="blank_">Code</a></li>
+          <li><a class="nav-link scrollto" href="code.html" target="blank_">Explainer Notebook</a></li>
+          <li><a href="test_data.csv" download="test_data.csv">Download Test Data</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle d-none"></i>
       </nav><!-- .navbar -->
@@ -128,8 +127,9 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-header">
-        <h2>comparing the network interactions between tweets in different languages showed *...* </h2>
-        <p> write conclusion - what can we see when comparing all the wordclouds? is there anything interesting?</p>
+        <h2>How do Twitter users interact in Ukrainian and Russian? </h2>
+        <p>In the following network analysis we investigate the nature of how users interact in Ukrainian and Russian by
+          looking at both clustering trends and community detection.</p>
       </div>
 
       <div id="myCarousel2" class="carousel slide" data-bs-ride="#myCarousel2">
@@ -138,38 +138,41 @@
             aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#myCarousel2" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#myCarousel2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#myCarousel2" data-bs-slide-to="3" aria-label="Slide 4"></button>
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-flex" src="assets/imgs/graphs/russian_network.png" alt="English Word Cloud">
-
+            <img class="d-flex" src="assets/imgs/graphs/uk.png" alt="Ukranian Networks">
             <div class="container">
               <div class="carousel-caption text-end">
-                <h1>English</h1>
-                <p>CLICK HERE to see an interactive version of the graph (it is going to be a slow loading time, but so
-                  worth it!) <a href="russian_network_graph.html" class="stretched-link" target="_blank"></a></p>
+                <h1>Ukranian vs Random Network</h1>
               </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <img class="d-flex" src="assets/imgs/graphs/russian_network.png" alt="Ukranian Network">
 
+          <div class="carousel-item">
+            <img class="d-flex" src="assets/imgs/graphs/H_uk_comms.png" alt="Ukranian Network">
             <div class="container">
               <div class="carousel-caption text-end">
-                <h1>Ukranian</h1>
-                <p>CLICK HERE to see an interactive version of the graph (it is going to be a slow loading time, but so
-                  worth it!) <a href="russian_network_graph.html" class="stretched-link" target="_blank"></a></p>
+                <h1>Ukranian Network Colored by Communities</h1>
               </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <img class="d-flex" src="assets/imgs/graphs/russian_network.png" alt="Russian Network">
 
+          <div class="carousel-item">
+            <img class="d-flex" src="assets/imgs/graphs/ru.png" alt="Russian Networks">
             <div class="container">
               <div class="carousel-caption text-end">
-                <h1>Russian</h1>
-                <p>CLICK HERE to see an interactive version of the graph (it is going to be a slow loading time, but so
-                  worth it!) <a href="russian_network_graph.html" class="stretched-link" target="_blank"></a></p>
+                <h1>Russian vs Random Network</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img class="d-flex" src="assets/imgs/graphs/H_ru_comms.png" alt="Russian Network">
+            <div class="container">
+              <div class="carousel-caption text-end">
+                <h1>Russian Network Colored by Communities</h1>
               </div>
             </div>
           </div>
@@ -183,6 +186,39 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+      <div class="section-header">
+        <p>Above are the network graphs for both languages displayed - both with and without community detection,
+          alongside their random network counterpart.</p>
+
+        <p> <br>Our analysis show that in both cases, the clustering trend for the random network is actually more
+          present than that of the original graphs, which could indicate that users to not seem to stay aorund in the
+          same threads responding to each other. Especially when retweeting is such a big part of twitter - if many
+          people retweet the same tweet, a big cluster will not form around them since they do not reply to eachother.
+          We can relate this to how the orignal networks compare to their random counterpart visually - in both
+          networks, the number of edges are the roughly the same in the original and random networks, but the number of
+          nodes is higher in the random graph. This could explain why the original networks look more sparse than their
+          random counterpart.</p>
+
+        <p> <br>Furthermore, coloring the nodes based on the community partitions allows us to detect some cluster
+          structures. As perhaps expected, most of the big clusters come from users retweeting and replying to bigger
+          news stations or organizations in both networks. We do not typically see private people engage in discussion
+          of the same size as for the news stations.</p>
+
+        <p> <br>This clustering trend makes sense if we consider how useres generally interact on Twitter. The structure
+          we typically will see in Twitter networks is for instance a certain tweet will go viral, which many will
+          retweet, reply to and quote tweet - then these replies and quote tweeets will be retweeted and replied to and
+          so on and it will continue almost in an exponential manner, meaning that people will not form one big
+          discussion forum in the comments of the original tweet, but rather spread the message in a very fast and
+          "broad" way.<p>
+
+            <p> <br>Furthermore, the connections we observe in these networks are not the same connections we see in a
+              social network for instance - the links do not correspond to friendships but rather a reaction a user
+              might have on something another user stated. Parent authors will not be enclined to respond in the same
+              way as on Reddit for instance. This means we will not typically observe triadic closures in these Twitter
+              networks compared to a social network of friends, family and co-workers. Seeing as we also investigate a
+              very difficult and widespread topic, there is not the same sense of community presented compared to how
+              communities behave on Reddit.</p>
+      </div>
     </div>
   </section>
   <!-- ======= End Social Network Section ======= -->
@@ -193,7 +229,7 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-header">
-        <h2>the relevancy of words used depends on the language</h2>
+        <h2>The relevancy of words used depends on the language</h2>
         <p> Take a look at the word clouds filtered on language in this section, which highlight the most relevant words
           within the given language on Twitter.
           The wordclouds are generated based on TF-IDF
@@ -310,7 +346,7 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-header">
-        <h2>there is a shift in usage of words between ukranian and russian tweets</h2>
+        <h2>There is a shift in usage of words between ukranian and russian tweets</h2>
       </div>
 
       <div class="row featurette">
@@ -333,7 +369,8 @@
                   datasets: [{
                       label: 'Total Sum',
                       data: [0, 0, 0.0699999999999994, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                        0],
+                        0
+                      ],
                       backgroundColor: 'rgba(0, 0, 0, 0.4)',
                       borderColor: 'rgba(0, 99, 132, 0)',
                       borderWidth: 1
@@ -350,7 +387,8 @@
                     {
                       label: '- ↓',
                       data: [0, 0.08749726414181719, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                        0],
+                        0
+                      ],
                       backgroundColor: 'rgba(0, 87, 183, 0.2)',
                       borderColor: 'rgba(255, 10, 132, 0)',
                       borderWidth: 1

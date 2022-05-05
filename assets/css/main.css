@@ -870,8 +870,12 @@ section {
   align-items: center;
   justify-content: center;
 }
-.hero .carousel-control-next-icon {
+.carousel-control-next-icon {
   padding-left: 3px;
+  background: rgba(var(--color-secondary-rgb), 0.4);
+  border-radius: 50px;
+  width: 54px;
+  height: 54px;
 }
 .hero .carousel-control-prev-icon {
   padding-right: 3px;

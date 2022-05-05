@@ -128,8 +128,8 @@
 
       <div class="img-fluid" id="observablehq-chart-e25ad43c"></div>
 
-        <script type="module">
-          import {Runtime, Library, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+      <script type="module">
+        import {Runtime, Library, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
             // import define from "https://api.observablehq.com/@d3/bar-chart-race.js?v=3";
             import define from "./bar-chart.js";
         
@@ -138,40 +138,40 @@
           if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-e25ad43c"));
         });
         </script>
-        </div>
-      </div>
+    </div>
+    </div>
 
-      <div class="section-header">
-        <p> If you hang around here for long enough, you will see the hashtags change over time. As time goes by,
-          certain
-          Ukranian city names appear and this actually gives us a rather precise timeline of the Russian invasions in
-          the
-          different areas of Ukraine. </p>
-        <p> <br> Looking at the bar chart from day to day, we see a general persistent trend in hashtags such as Ukraine
-          and Russia. Furthermore many hashtags expressing sympathy with Ukraine is trending throughout the period.
-          Examples of these are "StandWithUkraine" and "StopRussia".
+    <div class="section-header">
+      <p> If you hang around here for long enough, you will see the hashtags change over time. As time goes by,
+        certain
+        Ukranian city names appear and this actually gives us a rather precise timeline of the Russian invasions in
+        the
+        different areas of Ukraine. </p>
+      <p> <br> Looking at the bar chart from day to day, we see a general persistent trend in hashtags such as Ukraine
+        and Russia. Furthermore many hashtags expressing sympathy with Ukraine is trending throughout the period.
+        Examples of these are "StandWithUkraine" and "StopRussia".
 
-        </p>
-        <p> <br>One of the interesting things we find when studying the development in hashtag-trends is that different
-          Ukranian city names are trending around the same day as their were attacked by Russia. This means that the bar
-          chart provides us with a rather precise timeline of the attacks of Ukrainian cities. On the 24/02/2022 we see
-          that "Kyiv" is trending which corresponds to the day that Russia initiated attacks on the Kyiv Oblast <a
-            href="https://edition.cnn.com/europe/live-news/ukraine-russia-news-02-24-22-intl/index.html">(www.edition.cnn.com)</a>.
-          The same applies on 02/03/2022 where Kharkiv was trending and the Russian army captured Kharkiv <a
-            href="https://www.nytimes.com/live/2022/03/02/world/ukraine-russia-war">(www.nytimes.com)</a>, Mariupol on
-          10/03/2022, where the city was bombed <a
-            href="https://www.theguardian.com/world/2022/mar/10/mariupol-bombing-ukraine-before-and-after-satellite-images-map-russian-attack-residential-maternity-childrens-hospital">(www.theguardian.com)</a>
-          and lastly "Bucha" and "Buchamassacre" on 04/04/2022 and the following days. Bucha was visited on 04/04 by
-          Ukranian president Zelensky after the killings, rapings and torturement of many Ukranian civilians.
+      </p>
+      <p> <br>One of the interesting things we find when studying the development in hashtag-trends is that different
+        Ukranian city names are trending around the same day as their were attacked by Russia. This means that the bar
+        chart provides us with a rather precise timeline of the attacks of Ukrainian cities. On the 24/02/2022 we see
+        that "Kyiv" is trending which corresponds to the day that Russia initiated attacks on the Kyiv Oblast <a
+          href="https://edition.cnn.com/europe/live-news/ukraine-russia-news-02-24-22-intl/index.html">(www.edition.cnn.com)</a>.
+        The same applies on 02/03/2022 where Kharkiv was trending and the Russian army captured Kharkiv <a
+          href="https://www.nytimes.com/live/2022/03/02/world/ukraine-russia-war">(www.nytimes.com)</a>, Mariupol on
+        10/03/2022, where the city was bombed <a
+          href="https://www.theguardian.com/world/2022/mar/10/mariupol-bombing-ukraine-before-and-after-satellite-images-map-russian-attack-residential-maternity-childrens-hospital">(www.theguardian.com)</a>
+        and lastly "Bucha" and "Buchamassacre" on 04/04/2022 and the following days. Bucha was visited on 04/04 by
+        Ukranian president Zelensky after the killings, rapings and torturement of many Ukranian civilians.
 
-        </p>
-        <p> <br>All in all it seems that the majority, if not all, of the top trending hashtags on Twitter regarding the
-          war
-          expresses sympathy with Ukraine in this time of war. It is therefore probable that the majority of Twitter
-          users sympathises with Ukraine. Still it cannot be excluded that some nations may use other social media
-          platforms than Twitter and therefore we cannot conclude that the majority of social media users in general
-          supports Ukraine. </p>
-      </div>
+      </p>
+      <p> <br>All in all it seems that the majority, if not all, of the top trending hashtags on Twitter regarding the
+        war
+        expresses sympathy with Ukraine in this time of war. It is therefore probable that the majority of Twitter
+        users sympathises with Ukraine. Still it cannot be excluded that some nations may use other social media
+        platforms than Twitter and therefore we cannot conclude that the majority of social media users in general
+        supports Ukraine. </p>
+    </div>
 
   </section>
 
@@ -298,6 +298,26 @@
             the first two weeks of April. Hold your mouse on top of the bars to the right to see the exact values of
             word
             shifts!</p>
+          <p> <br>
+            To clarify what can be seen in the plot, the light colors represent the words that have been less frequently
+            used in the last two weeks than in the first two weeks and the dark colors respresent words that are more
+            frequently used in the last two weeks than in the first two weeks.
+
+            Yellow indicates positive words, while blue indicates negative words.
+          </p>
+          <p> <br>
+            As can be seen by the light blue color, the words 'crimes', 'rape' and 'raped' was more frequently used in
+            the first two weeks. However, the words 'stop', 'refugees', 'nuclear' and 'hospital' are more frequently
+            used now. This might be because there is a larger amount of refugees now than there was in the first two
+            weeks of the war and the topic of nuclear war and nuclear explosions are more prevalent now ever since the
+            attack near Chernobyl.
+
+            The word 'plant' is more frequently used now, but it is not easy to determine if this is referring to crops
+            or nuclear power plants without more context. </p>
+          <p> <br>
+            There is a slightly higher overall sentiment in these previous two weeks of data than in the first two
+            weeks. However, this difference is very slight - only 0.01 shift in sentiment score.
+          </p>
         </div>
         <div class="col-md-5">
           <div>
